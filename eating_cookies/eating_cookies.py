@@ -4,12 +4,17 @@ Returns: an integer
 '''
 def eating_cookies(n, cache=None):
     # Your code here
-    # amount = 3
-    # for x in range(0, n + 1):
-    #     print(x)
+    # if n < 0:
+    #     return 0
 
-    cache = [0]*(n+1)      
-    
+    # if n == 1:
+    #     return 1
+
+    # if cache is None:
+    #     cache = {}
+
+    cache = [0]*(n+1)
+
     total = 0
     for i in range(0,len(cache)):
         if i < 2:
@@ -20,6 +25,7 @@ def eating_cookies(n, cache=None):
         else: 
             cache[i] = cache[i-3] + cache[i-2] + cache[i-1] 
     return cache[i]
+    
 
     # return amount
 
